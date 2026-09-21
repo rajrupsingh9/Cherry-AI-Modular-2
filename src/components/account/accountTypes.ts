@@ -148,3 +148,26 @@ export interface BoardSnapshot {
   latexEquations?: string[];
   [key: string]: any;
 }
+
+
+export interface StudentAccountHubProps {
+  onClose: () => void;
+  studentName?: string;
+  grade?: any;
+  subject?: string;
+  board?: string;
+  mediumOfLearning?: string;
+  totalSessionsCount?: number;
+  onRefreshProfile?: () => void;
+  customBoardContent?: string;
+  pastSessions?: any[];
+  sessionSnapshots?: any[];
+  topics?: any[];
+  activeTopicIndex?: number;
+  topicBoardsContent?: Record<string, string>;
+  sessionId?: string | null;
+  activeDocument?: any;
+  onEnterClassroom?: () => void;
+  onSignOut?: () => void;
+  onDiscussWithCherry?: (topic: string) => void;
+}
